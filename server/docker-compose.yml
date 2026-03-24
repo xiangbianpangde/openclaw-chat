@@ -1,0 +1,168 @@
+# OpenClaw Chat - Server Deployment
+# 优化版：针对 2核4G 服务器精简配置
+
+services:
+  # ==================== 基础设施 ====================
+  
+  # MongoDB - 数据存储
+  mongo:
+    image: mongo:6.0
+    container_name: openclaw-mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: openim
+      MONGO_INITDB_ROOT_PASSWORD: openim123
+    volumes:
+      - mongo_data:/data/db
+    ports:
+      - "27017:27017"
+    deploy:
+      resources:
+        limits:
+          memory: 400M
+
+  # Redis - 缓存
+  redis:
+    image: redis:7-alpine
+    container_name: openclaw-redis
+    restart: always
+    command: redis-server --appendonly yes --maxmemory 128mb
+    volumes:
+      - redis_data:/data
+    ports:
+      - "6379:6379"
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+
+  # MinIO - 对象存储
+  minio:
+    image: minio/minio:latest
+    container_name: openclaw-minio
+    restart: always
+    environment:
+      MINIO_ROOT_USER: openim
+      MINIO_ROOT_PASSWORD: openim123
+    command: server /data --console-address ":9001"
+    volumes:
+      - minio_data:/data
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    deploy:
+      resources:
+        limits:
+          memory: 200M
+
+  # ==================== OpenIM 服务 ====================
+  
+  # OpenIM Server - 核心服务
+  openim-server:
+    image: openim/openim-server:latest
+    container_name: openclaw-server
+    restart: always
+    depends_on:
+      - mongo
+      - redis
+      - minio
+    environment:
+      - OPENIM_IP=${OPENIM_IP:-localhost}
+      - MONGO_URI=mongodb://openim:openim123@mongo:27017/openim
+      - REDIS_ADDR=redis:6379
+      - MINIO_ENDPOINT=minio:9000
+      - MINIO_ACCESS_KEY=openim
+      - MINIO_SECRET_KEY=openim123
+    ports:
+      - "10001:10001"  # MsgGateway
+      - "10002:10002"  # API
+    volumes:
+      - openim_logs:/openim/logs
+      - openim_config:/openim/config
+    deploy:
+      resources:
+        limits:
+          memory: 300M
+
+  # OpenIM Chat - 聊天服务
+  openim-chat:
+    image: openim/openim-chat:latest
+    container_name: openclaw-chat
+    restart: always
+    depends_on:
+      - openim-server
+      - mongo
+    environment:
+      - OPENIM_SERVER_ADDR=openim-server:10002
+      - MONGO_URI=mongodb://openim:openim123@mongo:27017/openim
+    ports:
+      - "10008:10008"
+    deploy:
+      resources:
+        limits:
+          memory: 200M
+
+  # ==================== 可视化界面 ====================
+  
+  # noVNC - 为 OpenClaw 提供远程桌面
+  novnc:
+    image: theasp/novnc:latest
+    container_name: openclaw-novnc
+    restart: always
+    environment:
+      - DISPLAY_WIDTH=1280
+      - DISPLAY_HEIGHT=720
+      - RUN_XTERM=no
+    ports:
+      - "6080:6080"
+    deploy:
+      resources:
+        limits:
+          memory: 100M
+
+  # Xvfb + VNC - 虚拟桌面
+  vnc:
+    image: consol/ubuntu-xfce-vnc:latest
+    container_name: openclaw-vnc
+    restart: always
+    environment:
+      - VNC_PW=openclaw
+      - VNC_RESOLUTION=1280x720
+      - VNC_COL_DEPTH=24
+    ports:
+      - "5900:5900"   # VNC
+      - "6901:6901"   # noVNC web
+    volumes:
+      - vnc_home:/headless
+    deploy:
+      resources:
+        limits:
+          memory: 300M
+
+  # ==================== 管理后台 ====================
+  
+  # OpenIM Web 管理后台
+  openim-web:
+    image: openim/openim-web:latest
+    container_name: openclaw-web
+    restart: always
+    depends_on:
+      - openim-server
+    ports:
+      - "11001:80"
+    deploy:
+      resources:
+        limits:
+          memory: 50M
+
+volumes:
+  mongo_data:
+  redis_data:
+  minio_data:
+  openim_logs:
+  openim_config:
+  vnc_home:
+
+networks:
+  default:
+    name: openclaw-network
