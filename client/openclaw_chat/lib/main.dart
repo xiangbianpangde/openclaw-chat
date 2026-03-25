@@ -1,22 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
-import 'package:hive_flutter/hive_flutter.dart';
+import 'screens/home_screen.dart';
+import 'services/openim_service.dart';
 
-import 'app/routes/app_pages.dart';
-import 'app/services/openim_service.dart';
-import 'app/services/storage_service.dart';
-
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  
-  // 初始化本地存储
-  await Hive.initFlutter();
-  await StorageService.init();
-  
-  // 初始化 OpenIM
-  await OpenIMService.init();
-  
+void main() {
   runApp(const OpenClawChatApp());
 }
 
@@ -25,37 +11,23 @@ class OpenClawChatApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenUtilInit(
-      designSize: const Size(375, 812),
-      minTextAdapt: true,
-      splitScreenMode: true,
-      builder: (context, child) {
-        return GetMaterialApp(
-          title: 'OpenClaw Chat',
-          debugShowCheckedModeBanner: false,
-          theme: ThemeData(
-            colorScheme: ColorScheme.fromSeed(
-              seedColor: const Color(0xFF2196F3),
-              brightness: Brightness.light,
-            ),
-            useMaterial3: true,
-            appBarTheme: const AppBarTheme(
-              centerTitle: true,
-              elevation: 0,
-            ),
-          ),
-          darkTheme: ThemeData(
-            colorScheme: ColorScheme.fromSeed(
-              seedColor: const Color(0xFF2196F3),
-              brightness: Brightness.dark,
-            ),
-            useMaterial3: true,
-          ),
-          themeMode: ThemeMode.system,
-          initialRoute: AppPages.initial,
-          getPages: AppPages.routes,
-        );
-      },
+    return MaterialApp(
+      title: 'OpenClaw Chat',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.blue,
+          brightness: Brightness.light,
+        ),
+        useMaterial3: true,
+      ),
+      darkTheme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.blue,
+          brightness: Brightness.dark,
+        ),
+        useMaterial3: true,
+      ),
+      home: const HomeScreen(),
     );
   }
 }

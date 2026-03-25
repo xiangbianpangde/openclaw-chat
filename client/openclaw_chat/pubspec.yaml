@@ -1,5 +1,5 @@
 name: openclaw_chat
-description: OpenClaw Chat - 基于 OpenIM 的专用聊天客户端，集成可视化远程管理
+description: OpenClaw Chat - 基于 OpenIM 的专用聊天客户端
 publish_to: 'none'
 version: 1.0.0+1
 
@@ -9,44 +9,17 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  
-  # OpenIM SDK
-  flutter_openim_sdk: ^3.5.1
-  
-  # 状态管理
-  get: ^4.6.5
-  
-  # UI 组件
   cupertino_icons: ^1.0.6
-  flutter_screenutil: ^5.9.0
-  
-  # WebView（用于远程桌面）
-  webview_flutter: ^4.4.2
-  
-  # 存储
+  http: ^1.1.0
   shared_preferences: ^2.2.2
-  hive: ^2.2.3
-  hive_flutter: ^1.1.0
-  
-  # 网络
-  dio: ^5.4.0
-  connectivity_plus: ^5.0.2
-  
-  # 图片
-  cached_network_image: ^3.3.0
-  image_picker: ^1.0.4
-  
-  # 工具
-  uuid: ^4.2.1
-  logger: ^2.0.2
+  webview_flutter: ^4.4.2
+  image_picker: ^1.0.5
   permission_handler: ^11.1.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^3.0.1
-  hive_generator: ^2.0.1
-  build_runner: ^2.4.7
 
 flutter:
   uses-material-design: true
@@ -54,8 +27,3 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
-
-  fonts:
-    - family: OpenClawIcon
-      fonts:
-        - asset: assets/fonts/OpenClawIcon.ttf
