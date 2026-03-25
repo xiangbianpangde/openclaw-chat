@@ -1,148 +1,198 @@
-# OpenClaw Chat
+# OpenClaw Chat 🦞
 
-基于 OpenIM 的专用聊天客户端，集成 OpenClaw 可视化管理界面。
+> **这是一个公开的开源库** - 任何人都可以免费使用
+
+基于 OpenIM 的企业级聊天客户端，集成 OpenClaw AI 多 Agent 系统。
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Flutter](https://img.shields.io/badge/Flutter-3.x-blue)](https://flutter.dev)
 [![OpenIM](https://img.shields.io/badge/OpenIM-Latest-green)](https://openim.io)
+[![Stars](https://img.shields.io/github/stars/xiangbianpangde/openclaw-chat)](https://github.com/xiangbianpangde/openclaw-chat/stargazers)
 
-## 功能特性
+---
 
-- 🔐 **OpenClaw 可视化管理** — 扫码登录、状态监控、任务管理
-- 💬 **即时通讯** — 基于 OpenIM 的企业级聊天功能
-- 🌐 **内嵌浏览器** — WebView 访问 OpenClaw 管理后台
-- 🖥️ **远程桌面** — noVNC 集成，服务器可视化操作
-- 🤖 **AI 助手** — 集成 OpenClaw 多 Agent 系统
+## 🚀 快速开始
 
-## 项目结构
-
-```
-openclaw-chat/
-├── README.md
-├── docs/
-│   ├── deployment.md          # 部署指南
-│   └── openclaw-integration.md # OpenClaw 对接文档
-├── server/
-│   ├── docker-compose.yml     # 服务编排
-│   ├── scripts/
-│   │   └── init.sh           # 初始化脚本
-│   └── openclaw-extension/
-│       └── index.js          # OpenIM 集成扩展
-├── client/
-│   └── openclaw_chat/
-│       ├── lib/
-│       │   ├── main.dart
-│       │   ├── screens/
-│       │   │   ├── home_screen.dart
-│       │   │   ├── login_screen.dart
-│       │   │   └── chat_screen.dart
-│       │   └── services/
-│       │       └── openim_service.dart
-│       └── pubspec.yaml
-└── integration/
-    └── openclaw-config.yml   # OpenClaw 对接配置
-```
-
-## 快速开始
-
-### 服务器要求
-
-- **CPU**: 2 核
-- **内存**: 4GB
-- **存储**: 20GB
-- **系统**: Ubuntu 20.04+ / Debian 11+
-- **软件**: Docker 20+, Docker Compose 2+
-
-### 1. 部署服务端
+### 1. 部署服务端（5 分钟）
 
 ```bash
-# 克隆仓库
+# SSH 登录你的服务器
+ssh root@YOUR_SERVER_IP
+
+# 克隆项目
 git clone https://github.com/xiangbianpangde/openclaw-chat.git
 cd openclaw-chat
 
 # 设置服务器 IP（替换为你的公网 IP）
-export OPENIM_IP="38.226.195.166"
+export OPENIM_IP="你的服务器 IP"
 
-# 运行初始化脚本
-cd server
-./scripts/init.sh
+# 一键部署
+cd server && ./scripts/init.sh
 ```
 
-初始化完成后，访问：
-- **OpenIM Web**: http://38.226.195.166:11001
-- **noVNC**: http://38.226.195.166:6080
-- **MinIO Console**: http://38.226.195.166:9001
+**部署完成后访问：**
+- 🌐 OpenIM Web: `http://YOUR_IP:11001`
+- 🖥️ noVNC: `http://YOUR_IP:6080`
+- 📊 Edict 看板：`http://YOUR_IP:7891`
 
-### 2. 配置 OpenClaw 对接
+### 2. 创建账号
 
-编辑 `server/openclaw-extension/config.json`:
+访问 `http://YOUR_IP:11001` → 用户管理 → 创建用户
 
-```json
-{
-  "serverUrl": "http://localhost:10002",
-  "botUserId": "openclaw_bot",
-  "adminToken": "YOUR_ADMIN_TOKEN",
-  "openclawUrl": "http://localhost:18789"
-}
-```
+### 3. 下载客户端
 
-启动扩展服务:
-
+**Android:**
 ```bash
-cd server/openclaw-extension
-npm install
-node index.js
+# 方式 1：直接下载 APK
+访问：https://github.com/xiangbianpangde/openclaw-chat/releases
+
+# 方式 2：自行编译
+cd client/openclaw_chat
+flutter pub get
+flutter build apk --release
 ```
 
-### 3. 编译客户端
-
+**iOS:**
 ```bash
 cd client/openclaw_chat
-
-# 安装依赖
-flutter pub get
-
-# 编译 Android APK
-flutter build apk --release
-
-# 编译 iOS
 flutter build ios --release
 ```
 
-### 4. 登录测试
+**Web 版（无需安装）:**
+```
+http://YOUR_IP:8080
+```
 
-1. 打开 App，输入服务器地址
-2. 使用 OpenIM Web 后台创建的账号登录
-3. 与 `OpenClaw 助手` 对话测试
+---
 
-## 可用命令
+## 📱 功能特性
 
-在聊天中发送以下命令：
+### 即时通讯
+- ✅ 单聊/群聊
+- ✅ 文本/图片/文件
+- ✅ 消息已读回执
+- ✅ 历史消息同步
 
-| 命令 | 说明 |
+### AI 集成
+- 🤖 OpenClaw 多 Agent 系统
+- 🧠 11 个专用 AI 助手
+- 💬 自然语言对话
+- 🔧 命令支持（/help, /scan, /status）
+
+### 管理功能
+- 📊 实时任务看板
+- 👥 用户管理后台
+- 🖥️ 远程桌面访问
+- 📈 Token 使用统计
+
+---
+
+## 🏗️ 架构
+
+```
+┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+│  Flutter App    │◄───►│  OpenIM Server  │◄───►│  OpenClaw Bot   │
+│  (Android/iOS)  │     │  (消息服务)      │     │  (AI 助手)       │
+└─────────────────┘     └─────────────────┘     └─────────────────┘
+                                                       │
+                                                       ▼
+                                              ┌─────────────────┐
+                                              │  11 AI Agents   │
+                                              │  - 太子          │
+                                              │  - 中书省        │
+                                              │  - 门下省        │
+                                              │  - 尚书省        │
+                                              │  - 六部          │
+                                              └─────────────────┘
+```
+
+---
+
+## 📖 文档
+
+| 文档 | 说明 |
 |------|------|
-| `/help` | 显示帮助信息 |
-| `/scan` | 获取扫码登录二维码 |
-| `/status` | 查看系统状态 |
-| `/desktop` | 获取远程桌面地址 |
+| [部署指南](docs/deployment.md) | 完整部署步骤 |
+| [OpenClaw 集成](docs/openclaw-integration.md) | AI 对接文档 |
+| [API 参考](docs/api.md) | REST API 文档 |
 
-## API 参考
+---
 
-### OpenIM API
+## 🛠️ 配置
+
+### 环境变量
+
+| 变量 | 说明 | 默认值 |
+|------|------|--------|
+| `OPENIM_IP` | 服务器 IP | 自动获取 |
+| `MONGO_PASSWORD` | MongoDB 密码 | 随机生成 |
+| `REDIS_PASSWORD` | Redis 密码 | 随机生成 |
+| `OPENIM_ADMIN_TOKEN` | 管理员 Token | 随机生成 |
+
+### 端口说明
+
+| 端口 | 服务 | 说明 |
+|------|------|------|
+| 10001-10010 | OpenIM | 消息服务 |
+| 11001 | OpenIM Web | 管理后台 |
+| 6080 | noVNC | 远程桌面 |
+| 7891 | Edict | OpenClaw 看板 |
+| 27017 | MongoDB | 数据库 |
+| 6379 | Redis | 缓存 |
+| 9000-9001 | MinIO | 对象存储 |
+
+---
+
+## 🔧 常用命令
+
+### 服务管理
 
 ```bash
-# 获取用户 Token
-curl -X POST http://SERVER_IP:10002/auth/user_token \
-  -H "Content-Type: application/json" \
-  -d '{"userID":"admin","secret":"openIM123"}'
+# 启动所有服务
+docker compose up -d
 
-# 发送消息
-curl -X POST http://SERVER_IP:10002/msg/send_msg \
+# 停止服务
+docker compose down
+
+# 查看状态
+docker compose ps
+
+# 查看日志
+docker compose logs -f openclaw-server
+
+# 重启服务
+docker compose restart
+```
+
+### 用户管理
+
+```bash
+# 创建用户
+curl -X POST "http://$OPENIM_IP:10002/user/register" \
+  -H "Content-Type: application/json" \
+  -d '{"userID":"user001","nickname":"测试用户","secret":"123456"}'
+
+# 删除用户
+curl -X POST "http://$OPENIM_IP:10002/user/delete" \
+  -H "Content-Type: application/json" \
+  -d '{"userID":"user001"}'
+
+# 获取用户列表
+curl -X POST "http://$OPENIM_IP:10002/user/get_page_users" \
+  -H "Content-Type: application/json" \
+  -d '{"pageNumber":1,"showNumber":10}'
+```
+
+### 消息测试
+
+```bash
+# 发送测试消息
+curl -X POST "http://$OPENIM_IP:10002/msg/send_msg" \
   -H "Content-Type: application/json" \
   -H "operationID: 123456" \
   -H "token: YOUR_TOKEN" \
   -d '{
-    "recvID": "user123",
+    "recvID": "user001",
     "sendID": "openclaw_bot",
     "contentType": 101,
     "content": "{\"content\":\"Hello\"}",
@@ -150,83 +200,97 @@ curl -X POST http://SERVER_IP:10002/msg/send_msg \
   }'
 ```
 
-### Webhook 回调
+---
 
-OpenClaw 扩展接收 OpenIM Webhook:
+## ❓ 常见问题
+
+### Q: 服务启动失败？
 
 ```bash
-POST /webhook/openim
-Content-Type: application/json
+# 检查 Docker 状态
+docker compose ps
 
-{
-  "command": "afterRecvMsg",
-  "data": {
-    "sendID": "user123",
-    "recvID": "openclaw_bot",
-    "content": "{\"content\":\"/help\"}",
-    "contentType": 101
-  }
-}
+# 查看详细日志
+docker compose logs -f
+
+# 清理重建
+docker compose down
+docker compose up -d
 ```
 
-## 开发
-
-### 添加新功能
-
-1. **服务端扩展**: `server/openclaw-extension/`
-2. **客户端页面**: `client/openclaw_chat/lib/screens/`
-3. **API 服务**: `client/openclaw_chat/lib/services/`
-
-### 调试
+### Q: 无法访问 Web 界面？
 
 ```bash
-# 查看服务端日志
-docker logs openclaw-server -f
-
-# 查看扩展服务日志
-cd server/openclaw-extension
-DEBUG=* node index.js
-
-# 客户端调试
-flutter run --verbose
-```
-
-## 常见问题
-
-### Q: 消息发送失败？
-
-检查：
-1. OpenIM Server 是否运行：`docker ps | grep openim`
-2. Bot 账号是否创建
-3. Token 是否正确
-
-### Q: 无法连接服务器？
-
-检查防火墙：
-```bash
-sudo ufw allow 10001:10010/tcp
+# 检查防火墙
+sudo ufw status
 sudo ufw allow 11001/tcp
-sudo ufw allow 6080/tcp
+
+# 检查服务
+curl http://localhost:11001
 ```
 
-### Q: 如何重置管理员密码？
+### Q: 如何备份数据？
 
 ```bash
-docker exec openclaw-mongo mongosh \
-  -u openim -p openim123 \
-  --eval "db.user.updateOne({userID:'admin'}, {\$set:{password:'new_password'}})"
+# 备份 MongoDB
+docker exec openclaw-mongo mongodump --out /backup
+
+# 备份配置文件
+tar -czf backup.tar.gz server/data .env
 ```
 
-## 贡献
+### Q: 如何升级？
+
+```bash
+# 拉取最新代码
+git pull
+
+# 更新镜像
+docker compose pull
+
+# 重启服务
+docker compose down
+docker compose up -d
+```
+
+---
+
+## 🤝 贡献
 
 欢迎提交 Issue 和 Pull Request！
 
-## 许可证
+1. Fork 本仓库
+2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
+4. 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 开启 Pull Request
 
-MIT License
+---
 
-## 联系方式
+## 📄 许可证
+
+MIT License - 详见 [LICENSE](LICENSE)
+
+---
+
+## 📞 联系方式
 
 - **GitHub**: https://github.com/xiangbianpangde/openclaw-chat
 - **OpenClaw**: https://github.com/openclaw/openclaw
 - **OpenIM**: https://github.com/openimsdk/open-im-server
+- **Discord**: 加入 OpenClaw 社区
+
+---
+
+## 🙏 致谢
+
+感谢以下开源项目：
+
+- [OpenIM](https://github.com/openimsdk/open-im-server) - 企业级即时通讯
+- [OpenClaw](https://github.com/openclaw/openclaw) - AI 多 Agent 系统
+- [Flutter](https://flutter.dev) - 跨平台 UI 框架
+- [Docker](https://docker.com) - 容器化部署
+
+---
+
+**⭐ 如果这个项目对你有帮助，请给个 Star！**
