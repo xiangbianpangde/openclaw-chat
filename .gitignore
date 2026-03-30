@@ -39,3 +39,15 @@ logs/
 *.aab
 *.ipa
 *.dSYM.zip
+
+# Gradle
+.gradle/
+**/.gradle/
+**/gradle-wrapper.jar
+gradlew
+gradlew.bat
+local.properties
+*.iml
+
+# Generated Flutter files
+**/GeneratedPluginRegistrant.java
