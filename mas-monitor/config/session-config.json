@@ -1,0 +1,30 @@
+{
+  "session": {
+    "name": "mas-monitor",
+    "type": "independent",
+    "description": "MAS 库独立监控 Agent - 不参与皇上对话"
+  },
+  "models": {
+    "primary": "bailian/qwen-plus",
+    "fallbacks": [
+      "bailian/qwen-coder-plus",
+      "bailian/qwen-turbo"
+    ],
+    "routing": {
+      "codeAnalysis": "bailian/qwen-coder-plus",
+      "changeDetection": "bailian/qwen-turbo",
+      "default": "bailian/qwen-plus"
+    }
+  },
+  "isolation": {
+    "independentSession": true,
+    "excludeFromMainChat": true,
+    "dedicatedMemory": true
+  },
+  "schedule": {
+    "pollIntervalMinutes": 5,
+    "compressionCycle": "hourly",
+    "fullReport": "daily"
+  },
+  "workspace": "/root/.openclaw/workspace-taizi/mas-monitor"
+}

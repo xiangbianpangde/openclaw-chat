@@ -1,0 +1,4 @@
+# MAS Monitor Cron 配置
+# 每 5 分钟执行一次监控
+
+*/5 * * * * cd /root/.openclaw/workspace-taizi/mas-monitor && node index.js --once >> logs/mas-monitor.log 2>&1

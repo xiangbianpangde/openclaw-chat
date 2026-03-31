@@ -1,0 +1,31 @@
+{
+  "name": "mas-monitor",
+  "version": "1.0.0",
+  "description": "MAS 库独立监控 Agent - 代码架构分析、更新日志跟踪、依赖关系分析、重大变更检测",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "once": "node index.js --once",
+    "analyze": "node scripts/analyze-architecture.js",
+    "track": "node scripts/track-changelog.js",
+    "deps": "node scripts/analyze-dependencies.js",
+    "detect": "node scripts/detect-major-changes.js",
+    "compress": "node scripts/context-compressor.js",
+    "webhook": "node scripts/webhook-handler.js",
+    "upload-readmes": "bash scripts/upload-readmes.sh",
+    "sync-readme": "bash scripts/sync-readme.sh"
+  },
+  "keywords": [
+    "mas",
+    "monitor",
+    "github",
+    "analysis",
+    "agent"
+  ],
+  "author": "MAS Monitor Agent",
+  "license": "MIT",
+  "dependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

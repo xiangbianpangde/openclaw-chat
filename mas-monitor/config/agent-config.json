@@ -1,0 +1,35 @@
+{
+  "agent": {
+    "name": "mas-monitor",
+    "description": "MAS 库独立监控 Agent",
+    "version": "1.0.0",
+    "created": "2026-03-29"
+  },
+  "models": {
+    "default": "qwen-plus",
+    "codeAnalysis": "qwen-coder-plus",
+    "changeDetection": "qwen-turbo"
+  },
+  "github": {
+    "targetRepo": "xiangbianpangde/MAS",
+    "analysisRepo": "xiangbianpangde/MAS-Analysis",
+    "pollIntervalMinutes": 5,
+    "webhookEnabled": false
+  },
+  "contextCompression": {
+    "layers": ["realtime", "hourly", "daily", "weekly"],
+    "tokenOptimizationTarget": 0.80,
+    "retentionDays": {
+      "realtime": 1,
+      "hourly": 7,
+      "daily": 30,
+      "weekly": 90
+    }
+  },
+  "analysis": {
+    "codeArchitecture": true,
+    "changelogTracking": true,
+    "dependencyAnalysis": true,
+    "majorChangeDetection": true
+  }
+}
