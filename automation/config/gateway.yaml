@@ -1,0 +1,14 @@
+# OpenClaw IM Gateway Configuration
+# 敏感信息从环境变量读取：GATEWAY_TOKEN, GITHUB_TOKEN
+gateway:
+  primary: "ws://38.226.195.166:18789"
+  backup: "ws://xbpd102.cc.cd/ws"
+  reconnect_delay: 5
+  max_retries: 10
+
+github:
+  repo: "https://github.com/xiangbianpangde/openclaw-im-client"
+  branch: "main"
+
+test:
+  total_cases: 24

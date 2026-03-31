@@ -1,0 +1,15 @@
+# OpenClaw IM Gateway Configuration
+gateway:
+  primary: "ws://38.226.195.166:18789"
+  backup: "ws://xbpd102.cc.cd/ws"
+  token: "${GATEWAY_TOKEN}"
+  reconnect_delay: 5
+  max_retries: 10
+
+github:
+  repo: "https://github.com/xiangbianpangde/openclaw-im-client"
+  token: "${GITHUB_TOKEN}"
+  branch: "main"
+
+test:
+  total_cases: 24
