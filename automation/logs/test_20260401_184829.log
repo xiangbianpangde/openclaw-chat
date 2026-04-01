@@ -1,0 +1,349 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.0.2, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+metadata: {'Python': '3.12.3', 'Platform': 'Linux-6.8.0-106-generic-x86_64-with-glibc2.39', 'Packages': {'pytest': '9.0.2', 'pluggy': '1.6.0'}, 'Plugins': {'html': '4.2.0', 'metadata': '3.1.1'}}
+rootdir: /root/.openclaw/workspace-taizi/automation
+plugins: html-4.2.0, metadata-3.1.1
+collecting ... collected 24 items
+
+tests/test_openclaw_im.py::TestOpenClawIM::test_01_app_launch ERROR      [  4%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_02_login_page_displayed ERROR [  8%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_03_gateway_connection ERROR [ 12%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_04_authentication_success ERROR [ 16%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_05_send_text_message ERROR [ 20%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_06_receive_message ERROR [ 25%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_07_message_delivery_status ERROR [ 29%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_08_send_image ERROR      [ 33%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_09_send_file ERROR       [ 37%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_10_message_history_sync ERROR [ 41%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_11_create_group_chat ERROR [ 45%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_12_add_group_members ERROR [ 50%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_13_group_message_broadcast ERROR [ 54%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_14_message_read_receipt ERROR [ 58%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_15_typing_indicator ERROR [ 62%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_16_message_search ERROR  [ 66%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_17_startup_time ERROR    [ 70%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_18_memory_usage ERROR    [ 75%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_19_message_latency ERROR [ 79%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_20_scroll_performance ERROR [ 83%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_21_background_foreground ERROR [ 87%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_22_network_switch ERROR  [ 91%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_23_long_session ERROR    [ 95%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_24_crash_recovery ERROR  [100%]
+
+==================================== ERRORS ====================================
+_____________ ERROR at setup of TestOpenClawIM.test_01_app_launch ______________
+E   ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.NewConnectionError: HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused"))
+------------------------------ Captured log setup ------------------------------
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+________ ERROR at setup of TestOpenClawIM.test_02_login_page_displayed _________
+E   ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.NewConnectionError: HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused"))
+------------------------------ Captured log setup ------------------------------
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+_________ ERROR at setup of TestOpenClawIM.test_03_gateway_connection __________
+E   ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.NewConnectionError: HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused"))
+------------------------------ Captured log setup ------------------------------
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+_______ ERROR at setup of TestOpenClawIM.test_04_authentication_success ________
+E   ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.NewConnectionError: HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused"))
+------------------------------ Captured log setup ------------------------------
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+__________ ERROR at setup of TestOpenClawIM.test_05_send_text_message __________
+E   ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.NewConnectionError: HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused"))
+------------------------------ Captured log setup ------------------------------
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+___________ ERROR at setup of TestOpenClawIM.test_06_receive_message ___________
+E   ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.NewConnectionError: HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused"))
+------------------------------ Captured log setup ------------------------------
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+_______ ERROR at setup of TestOpenClawIM.test_07_message_delivery_status _______
+E   ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.NewConnectionError: HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused"))
+------------------------------ Captured log setup ------------------------------
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+_____________ ERROR at setup of TestOpenClawIM.test_08_send_image ______________
+E   ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.NewConnectionError: HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused"))
+------------------------------ Captured log setup ------------------------------
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+______________ ERROR at setup of TestOpenClawIM.test_09_send_file ______________
+E   ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.NewConnectionError: HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused"))
+------------------------------ Captured log setup ------------------------------
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+________ ERROR at setup of TestOpenClawIM.test_10_message_history_sync _________
+E   ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.NewConnectionError: HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused"))
+------------------------------ Captured log setup ------------------------------
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+__________ ERROR at setup of TestOpenClawIM.test_11_create_group_chat __________
+E   ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.NewConnectionError: HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused"))
+------------------------------ Captured log setup ------------------------------
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+__________ ERROR at setup of TestOpenClawIM.test_12_add_group_members __________
+E   ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.NewConnectionError: HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused"))
+------------------------------ Captured log setup ------------------------------
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+_______ ERROR at setup of TestOpenClawIM.test_13_group_message_broadcast _______
+E   ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.NewConnectionError: HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused"))
+------------------------------ Captured log setup ------------------------------
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+________ ERROR at setup of TestOpenClawIM.test_14_message_read_receipt _________
+E   ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.NewConnectionError: HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused"))
+------------------------------ Captured log setup ------------------------------
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+__________ ERROR at setup of TestOpenClawIM.test_15_typing_indicator ___________
+E   ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.NewConnectionError: HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused"))
+------------------------------ Captured log setup ------------------------------
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+___________ ERROR at setup of TestOpenClawIM.test_16_message_search ____________
+E   ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.NewConnectionError: HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused"))
+------------------------------ Captured log setup ------------------------------
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+____________ ERROR at setup of TestOpenClawIM.test_17_startup_time _____________
+E   ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.NewConnectionError: HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused"))
+------------------------------ Captured log setup ------------------------------
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+____________ ERROR at setup of TestOpenClawIM.test_18_memory_usage _____________
+E   ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.NewConnectionError: HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused"))
+------------------------------ Captured log setup ------------------------------
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+___________ ERROR at setup of TestOpenClawIM.test_19_message_latency ___________
+E   ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.NewConnectionError: HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused"))
+------------------------------ Captured log setup ------------------------------
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+_________ ERROR at setup of TestOpenClawIM.test_20_scroll_performance __________
+E   ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.NewConnectionError: HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused"))
+------------------------------ Captured log setup ------------------------------
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+________ ERROR at setup of TestOpenClawIM.test_21_background_foreground ________
+E   ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.NewConnectionError: HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused"))
+------------------------------ Captured log setup ------------------------------
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+___________ ERROR at setup of TestOpenClawIM.test_22_network_switch ____________
+E   ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.NewConnectionError: HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused"))
+------------------------------ Captured log setup ------------------------------
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+____________ ERROR at setup of TestOpenClawIM.test_23_long_session _____________
+E   ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.NewConnectionError: HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused"))
+------------------------------ Captured log setup ------------------------------
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+___________ ERROR at setup of TestOpenClawIM.test_24_crash_recovery ____________
+E   ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.NewConnectionError: HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+E   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused"))
+------------------------------ Captured log setup ------------------------------
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+WARNING  urllib3.connectionpool:connectionpool.py:868 Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=4723): Failed to establish a new connection: [Errno 111] Connection refused")': /session
+- Generated html report: file:///root/.openclaw/workspace-taizi/automation/reports/test_report_20260401_184829.html -
+=========================== short test summary info ============================
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_01_app_launch - urllib3...
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_02_login_page_displayed
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_03_gateway_connection
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_04_authentication_success
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_05_send_text_message - ...
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_06_receive_message - ur...
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_07_message_delivery_status
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_08_send_image - urllib3...
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_09_send_file - urllib3....
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_10_message_history_sync
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_11_create_group_chat - ...
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_12_add_group_members - ...
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_13_group_message_broadcast
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_14_message_read_receipt
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_15_typing_indicator - u...
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_16_message_search - url...
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_17_startup_time - urlli...
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_18_memory_usage - urlli...
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_19_message_latency - ur...
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_20_scroll_performance
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_21_background_foreground
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_22_network_switch - url...
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_23_long_session - urlli...
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_24_crash_recovery - url...
+============================== 24 errors in 2.53s ==============================
