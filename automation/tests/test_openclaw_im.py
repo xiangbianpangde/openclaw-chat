@@ -40,6 +40,8 @@ class TestOpenClawIM:
         options.skip_unlock = True  # 跳过解锁
         options.disable_suppress_accessibility_service = True  # 不抑制辅助功能服务
         options.ignore_hidden_api_policy_error = True  # 忽略 hidden API 策略错误
+        options.uiautomator2_server_install_timeout = 120000  # 120 秒安装超时
+        options.uiautomator2_server_launch_timeout = 120000  # 120 秒启动超时
     
         try:
             self.driver = webdriver.Remote('http://localhost:4723', options=options)
