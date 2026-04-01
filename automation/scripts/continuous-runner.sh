@@ -26,9 +26,17 @@ log() {
 start_appium() {
     if ! pgrep -f "appium" > /dev/null; then
         log "🚀 Starting Appium server..."
+        export ANDROID_HOME=/opt/android-sdk
+        export ANDROID_SDK_ROOT=/opt/android-sdk
         nohup node /root/.nvm/versions/node/v22.22.1/bin/appium --address 127.0.0.1 --port 4723 > /tmp/appium.log 2>&1 &
         sleep 5
-        log "✅ Appium started"
+        # Verify Appium is running
+        if curl -s http://127.0.0.1:4723/status > /dev/null; then
+            log "✅ Appium started successfully"
+        else
+            log "❌ Appium failed to start"
+            return 1
+        fi
     else
         log "✅ Appium already running"
     fi
