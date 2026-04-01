@@ -37,10 +37,12 @@ class TestOpenClawIM:
         options.automation_name = 'UiAutomator2'
         options.no_reset = True
         options.adb_exec_timeout = 60000  # 60 秒超时
+        options.skip_unlock = True  # 跳过解锁
+        options.disable_suppress_accessibility_service = True  # 不抑制辅助功能服务
     
         try:
             self.driver = webdriver.Remote('http://localhost:4723', options=options)
-            self.wait = WebDriverWait(self.driver, 10)
+            self.wait = WebDriverWait(self.driver, 30)
             yield
         finally:
             if self.driver:
