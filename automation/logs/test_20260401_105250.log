@@ -1,0 +1,373 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.0.2, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+metadata: {'Python': '3.12.3', 'Platform': 'Linux-6.8.0-106-generic-x86_64-with-glibc2.39', 'Packages': {'pytest': '9.0.2', 'pluggy': '1.6.0'}, 'Plugins': {'html': '4.2.0', 'metadata': '3.1.1'}}
+rootdir: /root/.openclaw/workspace-taizi/automation
+plugins: html-4.2.0, metadata-3.1.1
+collecting ... collected 24 items
+
+tests/test_openclaw_im.py::TestOpenClawIM::test_01_app_launch ERROR      [  4%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_02_login_page_displayed ERROR [  8%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_03_gateway_connection ERROR [ 12%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_04_authentication_success ERROR [ 16%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_05_send_text_message ERROR [ 20%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_06_receive_message ERROR [ 25%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_07_message_delivery_status ERROR [ 29%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_08_send_image ERROR      [ 33%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_09_send_file ERROR       [ 37%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_10_message_history_sync ERROR [ 41%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_11_create_group_chat ERROR [ 45%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_12_add_group_members ERROR [ 50%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_13_group_message_broadcast ERROR [ 54%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_14_message_read_receipt ERROR [ 58%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_15_typing_indicator ERROR [ 62%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_16_message_search ERROR  [ 66%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_17_startup_time ERROR    [ 70%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_18_memory_usage ERROR    [ 75%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_19_message_latency ERROR [ 79%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_20_scroll_performance ERROR [ 83%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_21_background_foreground ERROR [ 87%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_22_network_switch ERROR  [ 91%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_23_long_session ERROR    [ 95%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_24_crash_recovery ERROR  [100%]
+
+==================================== ERRORS ====================================
+_____________ ERROR at setup of TestOpenClawIM.test_01_app_launch ______________
+E   selenium.common.exceptions.WebDriverException: Message: Could not find a connected Android device in 20000ms
+    Stacktrace:
+    UnknownError: Could not find a connected Android device in 20000ms
+        at getResponseForW3CError (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/errors.js:824:36)
+        at asyncHandler (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:430:77)
+    The above error is caused by
+    Error: Could not find a connected Android device in 20000ms
+        at ADB.getDevicesWithRetry (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-adb/build/lib/tools/system-calls.js:360:19)
+        at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+        at async AndroidUiautomator2Driver.getDeviceInfoFromCaps (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-android-driver/build/lib/commands/device/common.js:76:25)
+        at async AndroidUiautomator2Driver.createSession (/root/.appium/node_modules/appium-uiautomator2-driver/build/lib/driver.js:211:38)
+        at async AppiumDriver.createSession (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/build/lib/appium.js:324:43)
+________ ERROR at setup of TestOpenClawIM.test_02_login_page_displayed _________
+E   selenium.common.exceptions.WebDriverException: Message: Could not find a connected Android device in 20000ms
+    Stacktrace:
+    UnknownError: Could not find a connected Android device in 20000ms
+        at getResponseForW3CError (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/errors.js:824:36)
+        at asyncHandler (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:430:77)
+    The above error is caused by
+    Error: Could not find a connected Android device in 20000ms
+        at ADB.getDevicesWithRetry (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-adb/build/lib/tools/system-calls.js:360:19)
+        at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+        at async AndroidUiautomator2Driver.getDeviceInfoFromCaps (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-android-driver/build/lib/commands/device/common.js:76:25)
+        at async AndroidUiautomator2Driver.createSession (/root/.appium/node_modules/appium-uiautomator2-driver/build/lib/driver.js:211:38)
+        at async AppiumDriver.createSession (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/build/lib/appium.js:324:43)
+_________ ERROR at setup of TestOpenClawIM.test_03_gateway_connection __________
+E   selenium.common.exceptions.WebDriverException: Message: Could not find a connected Android device in 20000ms
+    Stacktrace:
+    UnknownError: Could not find a connected Android device in 20000ms
+        at getResponseForW3CError (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/errors.js:824:36)
+        at asyncHandler (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:430:77)
+    The above error is caused by
+    Error: Could not find a connected Android device in 20000ms
+        at ADB.getDevicesWithRetry (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-adb/build/lib/tools/system-calls.js:360:19)
+        at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+        at async AndroidUiautomator2Driver.getDeviceInfoFromCaps (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-android-driver/build/lib/commands/device/common.js:76:25)
+        at async AndroidUiautomator2Driver.createSession (/root/.appium/node_modules/appium-uiautomator2-driver/build/lib/driver.js:211:38)
+        at async AppiumDriver.createSession (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/build/lib/appium.js:324:43)
+_______ ERROR at setup of TestOpenClawIM.test_04_authentication_success ________
+E   selenium.common.exceptions.WebDriverException: Message: Could not find a connected Android device in 20000ms
+    Stacktrace:
+    UnknownError: Could not find a connected Android device in 20000ms
+        at getResponseForW3CError (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/errors.js:824:36)
+        at asyncHandler (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:430:77)
+    The above error is caused by
+    Error: Could not find a connected Android device in 20000ms
+        at ADB.getDevicesWithRetry (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-adb/build/lib/tools/system-calls.js:360:19)
+        at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+        at async AndroidUiautomator2Driver.getDeviceInfoFromCaps (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-android-driver/build/lib/commands/device/common.js:76:25)
+        at async AndroidUiautomator2Driver.createSession (/root/.appium/node_modules/appium-uiautomator2-driver/build/lib/driver.js:211:38)
+        at async AppiumDriver.createSession (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/build/lib/appium.js:324:43)
+__________ ERROR at setup of TestOpenClawIM.test_05_send_text_message __________
+E   selenium.common.exceptions.WebDriverException: Message: Could not find a connected Android device in 20000ms
+    Stacktrace:
+    UnknownError: Could not find a connected Android device in 20000ms
+        at getResponseForW3CError (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/errors.js:824:36)
+        at asyncHandler (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:430:77)
+    The above error is caused by
+    Error: Could not find a connected Android device in 20000ms
+        at ADB.getDevicesWithRetry (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-adb/build/lib/tools/system-calls.js:360:19)
+        at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+        at async AndroidUiautomator2Driver.getDeviceInfoFromCaps (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-android-driver/build/lib/commands/device/common.js:76:25)
+        at async AndroidUiautomator2Driver.createSession (/root/.appium/node_modules/appium-uiautomator2-driver/build/lib/driver.js:211:38)
+        at async AppiumDriver.createSession (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/build/lib/appium.js:324:43)
+___________ ERROR at setup of TestOpenClawIM.test_06_receive_message ___________
+E   selenium.common.exceptions.WebDriverException: Message: Could not find a connected Android device in 20000ms
+    Stacktrace:
+    UnknownError: Could not find a connected Android device in 20000ms
+        at getResponseForW3CError (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/errors.js:824:36)
+        at asyncHandler (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:430:77)
+    The above error is caused by
+    Error: Could not find a connected Android device in 20000ms
+        at ADB.getDevicesWithRetry (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-adb/build/lib/tools/system-calls.js:360:19)
+        at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+        at async AndroidUiautomator2Driver.getDeviceInfoFromCaps (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-android-driver/build/lib/commands/device/common.js:76:25)
+        at async AndroidUiautomator2Driver.createSession (/root/.appium/node_modules/appium-uiautomator2-driver/build/lib/driver.js:211:38)
+        at async AppiumDriver.createSession (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/build/lib/appium.js:324:43)
+_______ ERROR at setup of TestOpenClawIM.test_07_message_delivery_status _______
+E   selenium.common.exceptions.WebDriverException: Message: Could not find a connected Android device in 20000ms
+    Stacktrace:
+    UnknownError: Could not find a connected Android device in 20000ms
+        at getResponseForW3CError (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/errors.js:824:36)
+        at asyncHandler (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:430:77)
+    The above error is caused by
+    Error: Could not find a connected Android device in 20000ms
+        at ADB.getDevicesWithRetry (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-adb/build/lib/tools/system-calls.js:360:19)
+        at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+        at async AndroidUiautomator2Driver.getDeviceInfoFromCaps (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-android-driver/build/lib/commands/device/common.js:76:25)
+        at async AndroidUiautomator2Driver.createSession (/root/.appium/node_modules/appium-uiautomator2-driver/build/lib/driver.js:211:38)
+        at async AppiumDriver.createSession (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/build/lib/appium.js:324:43)
+_____________ ERROR at setup of TestOpenClawIM.test_08_send_image ______________
+E   selenium.common.exceptions.WebDriverException: Message: Could not find a connected Android device in 20000ms
+    Stacktrace:
+    UnknownError: Could not find a connected Android device in 20000ms
+        at getResponseForW3CError (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/errors.js:824:36)
+        at asyncHandler (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:430:77)
+    The above error is caused by
+    Error: Could not find a connected Android device in 20000ms
+        at ADB.getDevicesWithRetry (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-adb/build/lib/tools/system-calls.js:360:19)
+        at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+        at async AndroidUiautomator2Driver.getDeviceInfoFromCaps (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-android-driver/build/lib/commands/device/common.js:76:25)
+        at async AndroidUiautomator2Driver.createSession (/root/.appium/node_modules/appium-uiautomator2-driver/build/lib/driver.js:211:38)
+        at async AppiumDriver.createSession (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/build/lib/appium.js:324:43)
+______________ ERROR at setup of TestOpenClawIM.test_09_send_file ______________
+E   selenium.common.exceptions.WebDriverException: Message: Could not find a connected Android device in 20000ms
+    Stacktrace:
+    UnknownError: Could not find a connected Android device in 20000ms
+        at getResponseForW3CError (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/errors.js:824:36)
+        at asyncHandler (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:430:77)
+    The above error is caused by
+    Error: Could not find a connected Android device in 20000ms
+        at ADB.getDevicesWithRetry (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-adb/build/lib/tools/system-calls.js:360:19)
+        at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+        at async AndroidUiautomator2Driver.getDeviceInfoFromCaps (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-android-driver/build/lib/commands/device/common.js:76:25)
+        at async AndroidUiautomator2Driver.createSession (/root/.appium/node_modules/appium-uiautomator2-driver/build/lib/driver.js:211:38)
+        at async AppiumDriver.createSession (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/build/lib/appium.js:324:43)
+________ ERROR at setup of TestOpenClawIM.test_10_message_history_sync _________
+E   selenium.common.exceptions.WebDriverException: Message: Could not find a connected Android device in 20000ms
+    Stacktrace:
+    UnknownError: Could not find a connected Android device in 20000ms
+        at getResponseForW3CError (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/errors.js:824:36)
+        at asyncHandler (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:430:77)
+    The above error is caused by
+    Error: Could not find a connected Android device in 20000ms
+        at ADB.getDevicesWithRetry (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-adb/build/lib/tools/system-calls.js:360:19)
+        at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+        at async AndroidUiautomator2Driver.getDeviceInfoFromCaps (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-android-driver/build/lib/commands/device/common.js:76:25)
+        at async AndroidUiautomator2Driver.createSession (/root/.appium/node_modules/appium-uiautomator2-driver/build/lib/driver.js:211:38)
+        at async AppiumDriver.createSession (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/build/lib/appium.js:324:43)
+__________ ERROR at setup of TestOpenClawIM.test_11_create_group_chat __________
+E   selenium.common.exceptions.WebDriverException: Message: Could not find a connected Android device in 20000ms
+    Stacktrace:
+    UnknownError: Could not find a connected Android device in 20000ms
+        at getResponseForW3CError (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/errors.js:824:36)
+        at asyncHandler (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:430:77)
+    The above error is caused by
+    Error: Could not find a connected Android device in 20000ms
+        at ADB.getDevicesWithRetry (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-adb/build/lib/tools/system-calls.js:360:19)
+        at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+        at async AndroidUiautomator2Driver.getDeviceInfoFromCaps (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-android-driver/build/lib/commands/device/common.js:76:25)
+        at async AndroidUiautomator2Driver.createSession (/root/.appium/node_modules/appium-uiautomator2-driver/build/lib/driver.js:211:38)
+        at async AppiumDriver.createSession (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/build/lib/appium.js:324:43)
+__________ ERROR at setup of TestOpenClawIM.test_12_add_group_members __________
+E   selenium.common.exceptions.WebDriverException: Message: Could not find a connected Android device in 20000ms
+    Stacktrace:
+    UnknownError: Could not find a connected Android device in 20000ms
+        at getResponseForW3CError (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/errors.js:824:36)
+        at asyncHandler (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:430:77)
+    The above error is caused by
+    Error: Could not find a connected Android device in 20000ms
+        at ADB.getDevicesWithRetry (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-adb/build/lib/tools/system-calls.js:360:19)
+        at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+        at async AndroidUiautomator2Driver.getDeviceInfoFromCaps (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-android-driver/build/lib/commands/device/common.js:76:25)
+        at async AndroidUiautomator2Driver.createSession (/root/.appium/node_modules/appium-uiautomator2-driver/build/lib/driver.js:211:38)
+        at async AppiumDriver.createSession (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/build/lib/appium.js:324:43)
+_______ ERROR at setup of TestOpenClawIM.test_13_group_message_broadcast _______
+E   selenium.common.exceptions.WebDriverException: Message: Could not find a connected Android device in 20000ms
+    Stacktrace:
+    UnknownError: Could not find a connected Android device in 20000ms
+        at getResponseForW3CError (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/errors.js:824:36)
+        at asyncHandler (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:430:77)
+    The above error is caused by
+    Error: Could not find a connected Android device in 20000ms
+        at ADB.getDevicesWithRetry (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-adb/build/lib/tools/system-calls.js:360:19)
+        at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+        at async AndroidUiautomator2Driver.getDeviceInfoFromCaps (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-android-driver/build/lib/commands/device/common.js:76:25)
+        at async AndroidUiautomator2Driver.createSession (/root/.appium/node_modules/appium-uiautomator2-driver/build/lib/driver.js:211:38)
+        at async AppiumDriver.createSession (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/build/lib/appium.js:324:43)
+________ ERROR at setup of TestOpenClawIM.test_14_message_read_receipt _________
+E   selenium.common.exceptions.WebDriverException: Message: Could not find a connected Android device in 20000ms
+    Stacktrace:
+    UnknownError: Could not find a connected Android device in 20000ms
+        at getResponseForW3CError (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/errors.js:824:36)
+        at asyncHandler (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:430:77)
+    The above error is caused by
+    Error: Could not find a connected Android device in 20000ms
+        at ADB.getDevicesWithRetry (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-adb/build/lib/tools/system-calls.js:360:19)
+        at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+        at async AndroidUiautomator2Driver.getDeviceInfoFromCaps (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-android-driver/build/lib/commands/device/common.js:76:25)
+        at async AndroidUiautomator2Driver.createSession (/root/.appium/node_modules/appium-uiautomator2-driver/build/lib/driver.js:211:38)
+        at async AppiumDriver.createSession (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/build/lib/appium.js:324:43)
+__________ ERROR at setup of TestOpenClawIM.test_15_typing_indicator ___________
+E   selenium.common.exceptions.WebDriverException: Message: Could not find a connected Android device in 20000ms
+    Stacktrace:
+    UnknownError: Could not find a connected Android device in 20000ms
+        at getResponseForW3CError (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/errors.js:824:36)
+        at asyncHandler (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:430:77)
+    The above error is caused by
+    Error: Could not find a connected Android device in 20000ms
+        at ADB.getDevicesWithRetry (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-adb/build/lib/tools/system-calls.js:360:19)
+        at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+        at async AndroidUiautomator2Driver.getDeviceInfoFromCaps (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-android-driver/build/lib/commands/device/common.js:76:25)
+        at async AndroidUiautomator2Driver.createSession (/root/.appium/node_modules/appium-uiautomator2-driver/build/lib/driver.js:211:38)
+        at async AppiumDriver.createSession (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/build/lib/appium.js:324:43)
+___________ ERROR at setup of TestOpenClawIM.test_16_message_search ____________
+E   selenium.common.exceptions.WebDriverException: Message: Could not find a connected Android device in 20000ms
+    Stacktrace:
+    UnknownError: Could not find a connected Android device in 20000ms
+        at getResponseForW3CError (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/errors.js:824:36)
+        at asyncHandler (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:430:77)
+    The above error is caused by
+    Error: Could not find a connected Android device in 20000ms
+        at ADB.getDevicesWithRetry (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-adb/build/lib/tools/system-calls.js:360:19)
+        at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+        at async AndroidUiautomator2Driver.getDeviceInfoFromCaps (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-android-driver/build/lib/commands/device/common.js:76:25)
+        at async AndroidUiautomator2Driver.createSession (/root/.appium/node_modules/appium-uiautomator2-driver/build/lib/driver.js:211:38)
+        at async AppiumDriver.createSession (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/build/lib/appium.js:324:43)
+____________ ERROR at setup of TestOpenClawIM.test_17_startup_time _____________
+E   selenium.common.exceptions.WebDriverException: Message: Could not find a connected Android device in 20000ms
+    Stacktrace:
+    UnknownError: Could not find a connected Android device in 20000ms
+        at getResponseForW3CError (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/errors.js:824:36)
+        at asyncHandler (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:430:77)
+    The above error is caused by
+    Error: Could not find a connected Android device in 20000ms
+        at ADB.getDevicesWithRetry (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-adb/build/lib/tools/system-calls.js:360:19)
+        at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+        at async AndroidUiautomator2Driver.getDeviceInfoFromCaps (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-android-driver/build/lib/commands/device/common.js:76:25)
+        at async AndroidUiautomator2Driver.createSession (/root/.appium/node_modules/appium-uiautomator2-driver/build/lib/driver.js:211:38)
+        at async AppiumDriver.createSession (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/build/lib/appium.js:324:43)
+____________ ERROR at setup of TestOpenClawIM.test_18_memory_usage _____________
+E   selenium.common.exceptions.WebDriverException: Message: Could not find a connected Android device in 20000ms
+    Stacktrace:
+    UnknownError: Could not find a connected Android device in 20000ms
+        at getResponseForW3CError (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/errors.js:824:36)
+        at asyncHandler (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:430:77)
+    The above error is caused by
+    Error: Could not find a connected Android device in 20000ms
+        at ADB.getDevicesWithRetry (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-adb/build/lib/tools/system-calls.js:360:19)
+        at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+        at async AndroidUiautomator2Driver.getDeviceInfoFromCaps (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-android-driver/build/lib/commands/device/common.js:76:25)
+        at async AndroidUiautomator2Driver.createSession (/root/.appium/node_modules/appium-uiautomator2-driver/build/lib/driver.js:211:38)
+        at async AppiumDriver.createSession (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/build/lib/appium.js:324:43)
+___________ ERROR at setup of TestOpenClawIM.test_19_message_latency ___________
+E   selenium.common.exceptions.WebDriverException: Message: Could not find a connected Android device in 20000ms
+    Stacktrace:
+    UnknownError: Could not find a connected Android device in 20000ms
+        at getResponseForW3CError (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/errors.js:824:36)
+        at asyncHandler (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:430:77)
+    The above error is caused by
+    Error: Could not find a connected Android device in 20000ms
+        at ADB.getDevicesWithRetry (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-adb/build/lib/tools/system-calls.js:360:19)
+        at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+        at async AndroidUiautomator2Driver.getDeviceInfoFromCaps (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-android-driver/build/lib/commands/device/common.js:76:25)
+        at async AndroidUiautomator2Driver.createSession (/root/.appium/node_modules/appium-uiautomator2-driver/build/lib/driver.js:211:38)
+        at async AppiumDriver.createSession (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/build/lib/appium.js:324:43)
+_________ ERROR at setup of TestOpenClawIM.test_20_scroll_performance __________
+E   selenium.common.exceptions.WebDriverException: Message: Could not find a connected Android device in 20000ms
+    Stacktrace:
+    UnknownError: Could not find a connected Android device in 20000ms
+        at getResponseForW3CError (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/errors.js:824:36)
+        at asyncHandler (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:430:77)
+    The above error is caused by
+    Error: Could not find a connected Android device in 20000ms
+        at ADB.getDevicesWithRetry (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-adb/build/lib/tools/system-calls.js:360:19)
+        at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+        at async AndroidUiautomator2Driver.getDeviceInfoFromCaps (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-android-driver/build/lib/commands/device/common.js:76:25)
+        at async AndroidUiautomator2Driver.createSession (/root/.appium/node_modules/appium-uiautomator2-driver/build/lib/driver.js:211:38)
+        at async AppiumDriver.createSession (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/build/lib/appium.js:324:43)
+________ ERROR at setup of TestOpenClawIM.test_21_background_foreground ________
+E   selenium.common.exceptions.WebDriverException: Message: Could not find a connected Android device in 20000ms
+    Stacktrace:
+    UnknownError: Could not find a connected Android device in 20000ms
+        at getResponseForW3CError (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/errors.js:824:36)
+        at asyncHandler (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:430:77)
+    The above error is caused by
+    Error: Could not find a connected Android device in 20000ms
+        at ADB.getDevicesWithRetry (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-adb/build/lib/tools/system-calls.js:360:19)
+        at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+        at async AndroidUiautomator2Driver.getDeviceInfoFromCaps (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-android-driver/build/lib/commands/device/common.js:76:25)
+        at async AndroidUiautomator2Driver.createSession (/root/.appium/node_modules/appium-uiautomator2-driver/build/lib/driver.js:211:38)
+        at async AppiumDriver.createSession (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/build/lib/appium.js:324:43)
+___________ ERROR at setup of TestOpenClawIM.test_22_network_switch ____________
+E   selenium.common.exceptions.WebDriverException: Message: Could not find a connected Android device in 20000ms
+    Stacktrace:
+    UnknownError: Could not find a connected Android device in 20000ms
+        at getResponseForW3CError (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/errors.js:824:36)
+        at asyncHandler (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:430:77)
+    The above error is caused by
+    Error: Could not find a connected Android device in 20000ms
+        at ADB.getDevicesWithRetry (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-adb/build/lib/tools/system-calls.js:360:19)
+        at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+        at async AndroidUiautomator2Driver.getDeviceInfoFromCaps (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-android-driver/build/lib/commands/device/common.js:76:25)
+        at async AndroidUiautomator2Driver.createSession (/root/.appium/node_modules/appium-uiautomator2-driver/build/lib/driver.js:211:38)
+        at async AppiumDriver.createSession (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/build/lib/appium.js:324:43)
+____________ ERROR at setup of TestOpenClawIM.test_23_long_session _____________
+E   selenium.common.exceptions.WebDriverException: Message: Could not find a connected Android device in 20000ms
+    Stacktrace:
+    UnknownError: Could not find a connected Android device in 20000ms
+        at getResponseForW3CError (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/errors.js:824:36)
+        at asyncHandler (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:430:77)
+    The above error is caused by
+    Error: Could not find a connected Android device in 20000ms
+        at ADB.getDevicesWithRetry (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-adb/build/lib/tools/system-calls.js:360:19)
+        at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+        at async AndroidUiautomator2Driver.getDeviceInfoFromCaps (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-android-driver/build/lib/commands/device/common.js:76:25)
+        at async AndroidUiautomator2Driver.createSession (/root/.appium/node_modules/appium-uiautomator2-driver/build/lib/driver.js:211:38)
+        at async AppiumDriver.createSession (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/build/lib/appium.js:324:43)
+___________ ERROR at setup of TestOpenClawIM.test_24_crash_recovery ____________
+E   selenium.common.exceptions.WebDriverException: Message: Could not find a connected Android device in 20000ms
+    Stacktrace:
+    UnknownError: Could not find a connected Android device in 20000ms
+        at getResponseForW3CError (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/errors.js:824:36)
+        at asyncHandler (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:430:77)
+    The above error is caused by
+    Error: Could not find a connected Android device in 20000ms
+        at ADB.getDevicesWithRetry (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-adb/build/lib/tools/system-calls.js:360:19)
+        at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+        at async AndroidUiautomator2Driver.getDeviceInfoFromCaps (/root/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-android-driver/build/lib/commands/device/common.js:76:25)
+        at async AndroidUiautomator2Driver.createSession (/root/.appium/node_modules/appium-uiautomator2-driver/build/lib/driver.js:211:38)
+        at async AppiumDriver.createSession (/root/.nvm/versions/node/v22.22.1/lib/node_modules/appium/build/lib/appium.js:324:43)
+- Generated html report: file:///root/.openclaw/workspace-taizi/automation/reports/test_report_20260401_105250.html -
+=========================== short test summary info ============================
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_01_app_launch - seleniu...
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_02_login_page_displayed
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_03_gateway_connection
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_04_authentication_success
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_05_send_text_message - ...
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_06_receive_message - se...
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_07_message_delivery_status
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_08_send_image - seleniu...
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_09_send_file - selenium...
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_10_message_history_sync
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_11_create_group_chat - ...
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_12_add_group_members - ...
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_13_group_message_broadcast
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_14_message_read_receipt
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_15_typing_indicator - s...
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_16_message_search - sel...
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_17_startup_time - selen...
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_18_memory_usage - selen...
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_19_message_latency - se...
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_20_scroll_performance
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_21_background_foreground
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_22_network_switch - sel...
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_23_long_session - selen...
+ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_24_crash_recovery - sel...
+======================== 24 errors in 481.57s (0:08:01) ========================
