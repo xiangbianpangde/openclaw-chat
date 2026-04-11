@@ -1,0 +1,36 @@
+Collecting paddleocr==2.7.0.3
+  Using cached paddleocr-2.7.0.3-py3-none-any.whl.metadata (26 kB)
+Collecting paddlepaddle
+  Downloading paddlepaddle-3.3.1-cp312-cp312-manylinux1_x86_64.whl.metadata (8.8 kB)
+Collecting opencv-python==4.9.0.80
+  Downloading opencv_python-4.9.0.80-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (20 kB)
+Collecting shapely (from paddleocr==2.7.0.3)
+  Downloading shapely-2.1.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.8 kB)
+Collecting scikit-image (from paddleocr==2.7.0.3)
+  Downloading scikit_image-0.26.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (15 kB)
+Collecting imgaug (from paddleocr==2.7.0.3)
+  Downloading imgaug-0.4.0-py2.py3-none-any.whl.metadata (1.8 kB)
+Collecting pyclipper (from paddleocr==2.7.0.3)
+  Downloading pyclipper-1.4.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (8.6 kB)
+Collecting lmdb (from paddleocr==2.7.0.3)
+  Downloading lmdb-2.2.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (1.2 kB)
+Collecting tqdm (from paddleocr==2.7.0.3)
+  Downloading tqdm-4.67.3-py3-none-any.whl.metadata (57 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.7/57.7 kB 223.6 kB/s eta 0:00:00
+Requirement already satisfied: numpy in /usr/local/lib/python3.12/dist-packages (from paddleocr==2.7.0.3) (2.4.4)
+Collecting visualdl (from paddleocr==2.7.0.3)
+  Downloading visualdl-2.5.3-py3-none-any.whl.metadata (25 kB)
+Collecting rapidfuzz (from paddleocr==2.7.0.3)
+  Downloading rapidfuzz-3.14.5-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (12 kB)
+INFO: pip is looking at multiple versions of paddleocr to determine which version is compatible with other requirements. This could take a while.
+ERROR: Cannot install opencv-python==4.9.0.80 and paddleocr==2.7.0.3 because these package versions have conflicting dependencies.
+
+The conflict is caused by:
+    The user requested opencv-python==4.9.0.80
+    paddleocr 2.7.0.3 depends on opencv-python<=4.6.0.66
+
+To fix this you could try to:
+1. loosen the range of package versions you've specified
+2. remove package versions to allow pip attempt to solve the dependency conflict
+
+ERROR: ResolutionImpossible: for help visit https://pip.pypa.io/en/latest/topics/dependency-resolution/#dealing-with-dependency-conflicts

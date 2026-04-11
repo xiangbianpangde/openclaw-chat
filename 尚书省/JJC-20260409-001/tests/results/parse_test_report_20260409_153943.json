@@ -1,0 +1,117 @@
+{
+  "test_date": "2026-04-09T15:39:43.800746",
+  "summary": {
+    "total_files": 5,
+    "success_files": 3,
+    "failure_files": 2,
+    "success_rate": "60.00%",
+    "failure_rate": "40.00%",
+    "total_time_minutes": 0.04,
+    "avg_time_per_file_seconds": 0.48,
+    "total_pages": 28,
+    "total_metrics_extracted": 23,
+    "avg_metrics_per_file": 4.6
+  },
+  "performance_by_size": {
+    "small_<10MB": {
+      "count": 5,
+      "avg_time_seconds": 0.48
+    },
+    "medium_10-50MB": {
+      "count": 0,
+      "avg_time_seconds": 0
+    },
+    "large_>50MB": {
+      "count": 0,
+      "avg_time_seconds": 0
+    }
+  },
+  "validation_status": {
+    "pass": 0,
+    "warning": 3,
+    "error": 0,
+    "critical": 2
+  },
+  "file_results": [
+    {
+      "file_path": "/root/.openclaw/workspace-taizi/teddy_cup_raw/示例数据/附件2：财务报告/reports-上交所/600080_20250822_ABVM.pdf",
+      "file_size_mb": 0.13,
+      "parse_time_ms": 356.33,
+      "extract_time_ms": 7.99,
+      "validate_time_ms": 0.02,
+      "total_time_ms": 364.34,
+      "total_pages": 4,
+      "metrics_extracted": 0,
+      "validation_status": "critical",
+      "validation_issues": [
+        "未提供数据进行校验"
+      ],
+      "success": false,
+      "error_message": ""
+    },
+    {
+      "file_path": "/root/.openclaw/workspace-taizi/teddy_cup_raw/示例数据/附件5：研报数据/行业研报/医药健康行业研究：从2025医保谈判看行业风向：成功率提升，创新导向持续强化.pdf",
+      "file_size_mb": 1.19,
+      "parse_time_ms": 572.99,
+      "extract_time_ms": 6.08,
+      "validate_time_ms": 0.02,
+      "total_time_ms": 579.09,
+      "total_pages": 6,
+      "metrics_extracted": 0,
+      "validation_status": "critical",
+      "validation_issues": [
+        "未提供数据进行校验"
+      ],
+      "success": false,
+      "error_message": ""
+    },
+    {
+      "file_path": "/root/.openclaw/workspace-taizi/teddy_cup_raw/示例数据/附件5：研报数据/个股研报/业绩表现稳健，彰显强经营韧性与品牌力.pdf",
+      "file_size_mb": 0.88,
+      "parse_time_ms": 476.66,
+      "extract_time_ms": 29.21,
+      "validate_time_ms": 19.32,
+      "total_time_ms": 525.19,
+      "total_pages": 4,
+      "metrics_extracted": 6,
+      "validation_status": "warning",
+      "validation_issues": [
+        "completeness: 部分核心指标缺失：['营业收入', '总资产', '净资产']"
+      ],
+      "success": true,
+      "error_message": ""
+    },
+    {
+      "file_path": "/root/.openclaw/workspace-taizi/teddy_cup_raw/示例数据/附件5：研报数据/个股研报/2025年三季报点评：内涵+外延双轮驱动，经营拐点已现.pdf",
+      "file_size_mb": 1.13,
+      "parse_time_ms": 485.63,
+      "extract_time_ms": 20.33,
+      "validate_time_ms": 22.04,
+      "total_time_ms": 528.01,
+      "total_pages": 5,
+      "metrics_extracted": 9,
+      "validation_status": "warning",
+      "validation_issues": [
+        "completeness: 部分核心指标缺失：['总资产', '净资产']"
+      ],
+      "success": true,
+      "error_message": ""
+    },
+    {
+      "file_path": "/root/.openclaw/workspace-taizi/teddy_cup_raw/示例数据/附件2：财务报告/reports-上交所/600080_20230428_FQ2V.pdf",
+      "file_size_mb": 0.67,
+      "parse_time_ms": 406.34,
+      "extract_time_ms": 6.65,
+      "validate_time_ms": 1.43,
+      "total_time_ms": 414.42,
+      "total_pages": 9,
+      "metrics_extracted": 8,
+      "validation_status": "warning",
+      "validation_issues": [
+        "completeness: 部分核心指标缺失：['总资产', '净资产']"
+      ],
+      "success": true,
+      "error_message": ""
+    }
+  ]
+}

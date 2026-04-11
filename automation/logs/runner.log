@@ -130120,5 +130120,36 @@ ERROR tests/test_openclaw_im.py::TestOpenClawIM::test_24_crash_recovery - sel...
 [2026-04-02 16:41:36] 📊 Test report saved to /root/.openclaw/workspace-taizi/automation/reports/test_report_20260402_162559.html
 [2026-04-02 16:41:36] 💾 Committing changes to GitHub...
 📝 Changes detected, committing...
-ts/test_report_20260402_162559.html
-[2026-04-02 16:41:36] 💾 Committing changes to GitHub...
+[main 3b0c654] Auto: 测试进度更新 2026-04-02 16:41
+ 4 files changed, 3107 insertions(+), 7 deletions(-)
+ create mode 100644 automation/logs/test_20260402_162559.log
+ create mode 100644 automation/reports/test_report_20260402_162559.html
+🚀 Pushing to GitHub...
+To https://github.com/xiangbianpangde/openclaw-im-client
+   b9c14a6..3b0c654  main -> main
+✅ Commit and push completed!
+[2026-04-02 16:41:40] ⏳ Waiting 5 minutes before next test run...
+[2026-04-02 16:46:40] 🧪 Running tests...
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.0.2, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+metadata: {'Python': '3.12.3', 'Platform': 'Linux-6.8.0-106-generic-x86_64-with-glibc2.39', 'Packages': {'pytest': '9.0.2', 'pluggy': '1.6.0'}, 'Plugins': {'html': '4.2.0', 'metadata': '3.1.1'}}
+rootdir: /root/.openclaw/workspace-taizi/automation
+plugins: html-4.2.0, metadata-3.1.1
+collecting ... collected 24 items
+
+tests/test_openclaw_im.py::TestOpenClawIM::test_01_app_launch ERROR      [  4%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_02_login_page_displayed ERROR [  8%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_03_gateway_connection ERROR [ 12%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_04_authentication_success ERROR [ 16%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_05_send_text_message ERROR [ 20%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_06_receive_message ERROR [ 25%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_07_message_delivery_status ERROR [ 29%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_08_send_image ERROR      [ 33%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_09_send_file ERROR       [ 37%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_10_message_history_sync ERROR [ 41%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_11_create_group_chat ERROR [ 45%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_12_add_group_members ERROR [ 50%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_13_group_message_broadcast ERROR [ 54%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_14_message_read_receipt ERROR [ 58%]
+tests/test_openclaw_im.py::TestOpenClawIM::test_15_typing_indicator 

@@ -1,0 +1,33 @@
+# Web 服务依赖
+fastapi==0.100.0
+uvicorn[standard]==0.23.0
+python-multipart==0.0.6
+
+# 认证
+pyjwt==2.8.0
+bcrypt==4.0.1
+python-jose[cryptography]==3.3.0
+
+# 数据验证
+pydantic==2.0.0
+pydantic-settings==2.0.0
+
+# 缓存
+redis==5.0.0
+
+# 数据库
+sqlalchemy==2.0.0
+pymysql==1.1.0
+
+# 日志
+loguru==0.7.0
+
+# 测试
+pytest==7.4.0
+pytest-cov==4.1.0
+httpx==0.24.0
+
+# 项目核心依赖
+jieba==0.42.0
+chromadb==0.4.0
+sentence-transformers==2.2.0

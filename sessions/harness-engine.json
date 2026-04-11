@@ -1,0 +1,27 @@
+{
+  "name": "harness-engine",
+  "description": "MAS-Harness 自主进化引擎 - 独立 Agent 会话",
+  "model": {
+    "architecture_design": "qwen-coder-plus",
+    "evaluation": "qwen-plus",
+    "quick_check": "qwen-turbo"
+  },
+  "heartbeat": {
+    "interval_minutes": 10,
+    "enabled": false
+  },
+  "autonomous": true,
+  "participate_in_main_chat": false,
+  "reporting": {
+    "mode": "github_only",
+    "telegram_enabled": false,
+    "main_session_enabled": false
+  },
+  "github": {
+    "repository": "https://github.com/xiangbianpangde/MAS-Harness",
+    "token_env": "GH_TOKEN"
+  },
+  "workspace": "/root/.openclaw/workspace-taizi/MAS-Harness",
+  "created_at": "2026-03-29T22:58:00+08:00",
+  "status": "stopped"
+}
