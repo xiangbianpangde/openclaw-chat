@@ -30,13 +30,23 @@
 7. 关闭 CDP 连接
 ```
 
-## Browser Agent 调度逻辑
+## Browser Agent 调度逻辑（三省六部制）
 
 ```python
 async def dispatch_browser_task(task: BrowserTask) -> BrowserResult:
-    # 创建 CDP 会话
+    # 1. 中书省拟定方案
+    plan = await zhongshu_sheng.plan_task(task)
+    
+    # 2. 门下省审核方案
+    review = await menxia_sheng.review_plan(plan)
+    if not review.approved:
+        return review.rejection_reason
+    
+    # 3. 尚书省执行
+    result = await shangshu_sheng.execute(plan)
+    
+    # 4. 尚书省·Browser 部执行具体操作
     async with CDPSession(ws_url=task.ws_url) as cdp:
-        # 根据子任务类型执行
         if task.sub_type == "navigate":
             result = await cdp.navigate(task.url)
         elif task.sub_type == "screenshot":
@@ -47,8 +57,11 @@ async def dispatch_browser_task(task: BrowserTask) -> BrowserResult:
             result = await verify_fix(cdp, task.before_snapshot, task.after_snapshot)
         elif task.sub_type == "ui_reasoning":
             result = await ui_reasoning(cdp, task.ui_description)
-        
-        return result
+    
+    # 5. 门下省审核结果
+    final_review = await menxia_sheng.review_result(result)
+    
+    return final_review
 ```
 
 # 🤝 协作流程
