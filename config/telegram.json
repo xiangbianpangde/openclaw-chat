@@ -1,0 +1,6 @@
+{
+  "bot_token": "YOUR_BOT_TOKEN_HERE",
+  "chat_id": "YOUR_CHAT_ID_HERE",
+  "enabled": false,
+  "note": "请替换为实际的 Telegram Bot Token 和 Chat ID"
+}
