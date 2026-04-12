@@ -7,10 +7,10 @@
       "org": "中书省",
       "official": "中书省",
       "created_at": "2026-04-12 16:51:12 CST",
-      "updated_at": "2026-04-12 17:38:20 CST",
+      "updated_at": "2026-04-12 18:30:42 CST",
       "progress": {
-        "current": "阶段一✅完成（Skills 筛选调查），发现下载 200 个 Skills 需要 50+ 小时审查时间，现有 52 个 Skills 已 100% 功能覆盖，建议下载 0-20 个而非 200 个，请皇上圣裁",
-        "plan": "接收旨意✅|阶段一 Skills 筛选✅|等待皇上圣裁⏳|阶段二 Skills 下载⏳|阶段三去重优化⏳|阶段四安全审查⏳|阶段五 Agent 配置⏳|阶段六 GitHub 同步⏳|回奏⏳"
+        "current": "阶段一✅完成（ClawHub.ai 调查），发现网站需要浏览器交互才能下载，现有 52 个 Skills 已 100% 功能覆盖，建议不下载新 Skills，请皇上圣裁",
+        "plan": "接收旨意✅|阶段一 Skills 分类✅|等待皇上圣裁⏳|阶段二 Skills 下载⏳|阶段三去重优化⏳|阶段四安全审查⏳|阶段五 Agent 配置⏳|阶段六 GitHub 同步⏳|回奏⏳"
       },
       "flow_history": [
         {
