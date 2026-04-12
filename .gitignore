@@ -51,3 +51,10 @@ local.properties
 
 # Generated Flutter files
 **/GeneratedPluginRegistrant.java
+# 自动汇报机制（本地工具，不同步）
+scripts/auto_report.py
+scripts/supervisor_check.py
+config/telegram.json
+尚书省/自动汇报机制.md
+尚书省/问责制度.md
+尚书省/监督职责.md
